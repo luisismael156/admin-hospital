@@ -9,14 +9,14 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 
 const routes: Routes = [
   {
-    path: '', component: PagesComponent, children: [
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'progress', component: ProgressComponent },
-      { path: 'graficas1', component: Graficas1Component },
-      { path: 'setting', component: AccountSettingsComponent },
+    path: '', component: PagesComponent,  children: [
+      { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Dashboard' } },
+      { path: 'progress', component: ProgressComponent, data: { titulo: 'Progress' } },
+      { path: 'graficas1', component: Graficas1Component, data: { titulo: 'Graficas' } },
+      { path: 'setting', component: AccountSettingsComponent, data: { titulo: 'Ajustes' } },
 
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-      
+
     ]
   }
 
@@ -26,7 +26,7 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PagesRoutingModule {}
+export class PagesRoutingModule { }
 
 
 
