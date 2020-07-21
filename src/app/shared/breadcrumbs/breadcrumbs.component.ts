@@ -16,7 +16,7 @@ export class BreadcrumbsComponent implements OnInit {
       .subscribe(data => {
         this.titulo = data.titulo;
         this.title.setTitle(this.titulo);
-        
+
         const metatag: MetaDefinition = {
           name: 'description',
           content: this.titulo

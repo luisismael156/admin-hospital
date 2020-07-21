@@ -10,8 +10,11 @@ import { RegisterComponent } from './login/register.component';
 // Modulo Externos
 import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IncrementadorComponent } from './components/incrementador/incrementador.component';
+
+
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { IncrementadorComponent } from './components/incrementador/incrementador
     BrowserModule,
     PagesModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

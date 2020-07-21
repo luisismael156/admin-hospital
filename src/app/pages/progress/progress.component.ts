@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario/usuario.service';
 
 @Component({
   selector: 'app-progress',
@@ -13,6 +14,7 @@ export class ProgressComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   
   }
  
 
