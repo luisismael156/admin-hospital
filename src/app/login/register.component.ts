@@ -3,7 +3,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsuarioService } from '../services/usuario/usuario.service';
 import { Usuarios } from '../models/usuario.models';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
 
 
 declare function init_plugins();
@@ -52,11 +51,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
     if (!this.forma.value.condiciones) {
-      Swal.fire(
-        'Condiciones',
-        'Debes aceptar los terminos y condiciones',
-        'warning'
-      )
+     
       return;
     }
 
